@@ -1,0 +1,1 @@
+export const apiSite = "https://api.restful-api.dev"
