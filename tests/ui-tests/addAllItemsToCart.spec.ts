@@ -3,9 +3,9 @@ import { Product } from "../../page-objects/product.page";
 import { test, expect } from "@playwright/test";
 
 test("add all items to cart", async ({ page }) => {
-  await page.goto("https://www.saucedemo.com/");
-  const loginPage = new LoginPage(page);
-  await loginPage.signIn(page, "standard_user", "secret_sauce");
+   await page.goto("https://www.saucedemo.com/inventory.html");
+  // const loginPage = new LoginPage(page);
+  // await loginPage.signIn(page, "standard_user", "secret_sauce");
 
   const productPage = new Product(page);
   const products = await page.getByRole('button').filter({ hasText: 'Add to cart' }).all();
